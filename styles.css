@@ -1,17 +1,17 @@
 :root {
     --bg-dark: #070707;
-    --red-brand: #ff3333;
-    --red-button: #ff2a3a;
-    --red-button-hover: #ff0f22;
-    --red-hover: #cc0022;
+    --blue-brand: #0077ff;
+    --blue-button: #0066ff;
+    --blue-button-hover: #0055ee;
+    --blue-hover: #0044cc;
     --text-color: #d8d8d8;
     --highlight: #ffffff;
     --yellow-warning: #fbc02d;
-    --grid-line: rgba(255, 0, 43, 0.08);
+    --grid-line: rgba(0, 119, 255, 0.08);
     
-    --font-heading: 'Share Tech Mono', monospace;
-    --font-body: 'Share Tech Mono', monospace;
-    --font-hacker: 'Share Tech Mono', monospace;
+    --font-heading: 'Outfit', sans-serif;
+    --font-body: 'Outfit', sans-serif;
+    --font-hacker: 'Outfit', sans-serif;
     font-size: 16px;
 }
 
@@ -72,14 +72,18 @@ body {
     width: 100%;
     text-align: center;
     padding: 1rem 0;
-    font-size: 0.75rem;
+    font-size: 0.55rem;
     font-family: var(--font-heading);
     font-weight: 800;
     letter-spacing: 0.5px;
-    color: #a8a8a8;
+    color: #ffffff;
     text-transform: uppercase;
     z-index: 2;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent);
+    background: rgba(0, 60, 180, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0, 119, 255, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .hero-visual {
@@ -97,7 +101,6 @@ body {
     background-size: cover;
     background-position: top center;
     background-repeat: no-repeat;
-    /* Simulate the red lighting in the photo if the original photo isn't fully red */
     position: absolute;
     top: 0;
     left: 0;
@@ -126,7 +129,7 @@ body {
 .author-label {
     font-family: var(--font-heading);
     font-weight: 600;
-    color: var(--red-brand);
+    color: var(--blue-brand);
     font-size: 0.85rem;
     letter-spacing: 2px;
     margin-bottom: 0.75rem;
@@ -147,7 +150,7 @@ body {
     font-family: var(--font-body);
     font-size: 1.4rem;
     font-weight: 700;
-    color: var(--red-brand);
+    color: var(--blue-brand);
     margin-bottom: 0.8rem;
     line-height: 1.2;
 }
@@ -167,16 +170,16 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(to right, var(--red-button), #d72130);
+    background: linear-gradient(to right, var(--blue-button), #005ce6);
     color: #fff;
     padding: 1.25rem 1.5rem;
     border-radius: 50px; /* pill shape */
     font-family: var(--font-heading);
     font-weight: 800;
-    font-size: 0.95rem;
+    font-size: 0.85rem;
     text-decoration: none;
     text-transform: uppercase;
-    box-shadow: 0 10px 30px rgba(255, 42, 58, 0.3), inset 0px 2px 2px rgba(255,255,255,0.2);
+    box-shadow: 0 10px 30px rgba(0, 102, 255, 0.3), inset 0px 2px 2px rgba(255, 255, 255, 0.2);
     transition: all 0.3s ease;
     border: none;
     cursor: pointer;
@@ -185,7 +188,7 @@ body {
 }
 
 .btn-primary:hover {
-    box-shadow: 0 15px 40px rgba(255, 42, 58, 0.5), inset 0px 2px 2px rgba(255,255,255,0.2);
+    box-shadow: 0 15px 40px rgba(0, 102, 255, 0.5), inset 0px 2px 2px rgba(255, 255, 255, 0.2);
     transform: translateY(-2px);
 }
 
@@ -195,7 +198,7 @@ body {
     font-weight: 800;
     color: var(--yellow-warning);
     text-align: center;
-    margin-bottom: 4rem;
+    margin-bottom: 1rem;
 }
 .warning-icon.yellow {
     color: var(--yellow-warning);
@@ -203,7 +206,7 @@ body {
 
 /* --- SOCIAL PROOF (Keeping Hacker Vibe) --- */
 .social-proof-section {
-    padding: 2rem 1.5rem 6rem;
+    padding: 2rem 1.5rem 2rem;
 }
 
 .section-title {
@@ -240,8 +243,8 @@ body {
 }
 
 .swiper-slide-active {
-    border-color: var(--red-brand);
-    box-shadow: 0 0 25px rgba(255, 0, 43, 0.3);
+    border-color: var(--blue-brand);
+    box-shadow: 0 0 25px rgba(0, 119, 255, 0.3);
 }
 
 .carousel-video {
@@ -278,7 +281,7 @@ body {
 }
 
 .toggle-play-btn:hover {
-    background: var(--red-brand);
+    background: var(--blue-brand);
     border-color: #fff;
     transform: translate(-50%, -50%) scale(1.1);
 }
@@ -303,7 +306,7 @@ body {
 }
 
 .toggle-mute-btn:hover {
-    background: var(--red-brand);
+    background: var(--blue-brand);
     border-color: #fff;
 }
 
@@ -313,15 +316,72 @@ body {
     opacity: 1 !important;
 }
 .swiper-pagination-bullet-active {
-    background: var(--red-brand) !important;
+    background: var(--blue-brand) !important;
 }
 .swiper-button-next, .swiper-button-prev {
-    color: var(--red-brand) !important;
-    text-shadow: 0 0 10px rgba(255, 0, 43, 0.4);
+    color: var(--blue-brand) !important;
+    text-shadow: 0 0 10px rgba(0, 119, 255, 0.4);
 }
 
 .cta-bottom {
     text-align: center;
+}
+
+/* --- FOOTER --- */
+.site-footer {
+    width: 100%;
+    padding: 1.5rem 1.5rem;
+    background: #030303; 
+    border-top: 1px solid rgba(255,255,255,0.05);
+    text-align: center;
+    position: relative;
+    z-index: 5;
+}
+
+.footer-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.footer-title {
+    font-family: var(--font-heading);
+    color: var(--blue-brand);
+    font-size: 1.2rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+}
+
+.footer-disclaimer {
+    font-size: 0.75rem;
+    color: #6a6a6a;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.footer-links a {
+    color: #a8a8a8;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 700;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: var(--highlight);
+}
+
+.footer-copyright {
+    font-size: 0.7rem;
+    color: #4a4a4a;
+    letter-spacing: 0.5px;
 }
 
 /* Media Queries for Desktop */
